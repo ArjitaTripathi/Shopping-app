@@ -1,0 +1,28 @@
+.mainHeader{
+    background-color: #fff;
+    height: 60%;
+    padding: 15px 90px;
+    // background-color: red;
+    .menuContents{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brandName{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .menuItems{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 0 20px;
+            list-style-type: none;
+            // background-color: pink;
+            width: fit-content;
+        }
+        .cartAndAccount{
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

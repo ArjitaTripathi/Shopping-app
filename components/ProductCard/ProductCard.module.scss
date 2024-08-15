@@ -1,0 +1,23 @@
+.product{
+    width: 100%;
+    padding:0 10px;
+    .productImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(229, 229, 228);
+        border-radius: 20px;
+    }
+    .productDetails{
+        margin-top: 15px;
+        .ItemName{
+            font-size: 1.2rem;
+        }
+        .rating{
+            font-size: 0.8rem;
+        }
+        .productPrice{
+            font-size: 1.3rem;
+        }
+    }
+}

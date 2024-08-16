@@ -1,3 +1,29 @@
 .footer{
-    background-color: rgb(127, 126, 126);
+    display: flex;
+    justify-content: center;
+    .newsLetter{
+        background-color: #000;
+        border-radius: 25px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        height: 100px;
+        color: #fff;
+        margin-top: 20px;
+        .subHeading{
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 30%;
+            .btn{
+                padding: 10px 40px;
+            }
+        }
+    }
 }

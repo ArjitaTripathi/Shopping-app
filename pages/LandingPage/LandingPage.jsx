@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './LandingPage.module.scss'
-import { Header } from '@/components/Header/Header'
 import mainImage from '../../public/images/photos/mainImage.png'
 import Versace from '../../public/images/photos/versace.png'
 import Gucci from '../../public/images/photos/gucci.png'
@@ -16,12 +15,11 @@ import Party from '../../public/images/photos/party.png'
 import Image from 'next/image'
 import ProductCard from '@/components/ProductCard/ProductCard'
 import TestimonialCard from '@/components/TestimonialCard/TestimonialCard'
-import Footer from '@/components/Footer/Footer'
+import { BrandImages, ClothesTypes } from '@/util/constants'
 
 export const LandingPage = () => {
   return (
     <div className={style.mainContainer}>
-      <Header/>
       <section className={style.section1}>
         <div className={style.mainContainer}>
           <div className={style.mainText}>
@@ -49,11 +47,11 @@ export const LandingPage = () => {
       </section>
       <div>
         <ul className={style.brandsName}>
-          <li><Image src={Versace} height="130" width="150"/></li>
-          <li><Image src={Gucci} height="70" width="150"/></li>
-          <li><Image src={Prada} height="200" width="150"/></li>
-          <li><Image src={Zara} height="30" width="150"/></li>
-          <li><Image src={cKlien} height="50" width="150"/></li>
+          {
+            BrandImages.map((brand)=>{
+              return <li><Image src={brand.src} height={brand.height} width={brand.width}/></li>
+            })
+          }
         </ul>
       </div>
       <section className={style.section2}>
@@ -81,69 +79,22 @@ export const LandingPage = () => {
         <div className={style.dressTypes}>
           <span className={style.subHeading}>BROWSE BY DRESS STYLE</span>
           <div className={style.gridContainer}>
-            {/* <div className={style.gridSubContainer}> */}
-              <div>
-                <h2>Casual</h2>
-                <Image 
-                  src={Casual} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='contain'
-                  // style={style.dressTypeImg}
-                  style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-20%, -50%)' }}
-                />
-              </div>
-              <div>
-                <h2>Formal</h2>
-                <Image 
-                  src={Formal} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='cover'
-                  style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-20%, -50%)' }}
-                />
-              </div>
-              <div>
-                <h2>Party</h2>
-                <Image 
-                  src={Party} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='cover'
-                  style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-20%, -50%)' }}
-                />
-              </div>
-              <div>
-                <h2>Wedding</h2>
-                <Image 
-                  src={Wedding} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='cover'
-                  style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-20%, -50%)' }}
-                />
-              </div>
-              <div>
-                <h2>Gym</h2>
-                <Image 
-                  src={Gym} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='contain'
-                  style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-20%, -50%)' }}
-                />
-              </div>
-              <div>
-                <h2>Swim</h2>
-                <Image 
-                  src={Swim} 
-                  alt='Casual'
-                  layout='fill'
-                  objectFit='contain'
-                  style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-10%, -50%)' }}
-                />
-              </div>
-            {/* </div> */}
+            {
+              ClothesTypes.map(typeofCloth=>{
+                return  (
+                  <div>
+                    <h2>{typeofCloth.name}</h2>
+                    <Image 
+                      src={typeofCloth.src} 
+                      alt={typeofCloth.name}
+                      layout='fill'
+                      objectFit={typeofCloth.objectFit}
+                      style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-40%, -50%)' }}
+                    />
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </section>
@@ -154,15 +105,7 @@ export const LandingPage = () => {
           <TestimonialCard/>
           <TestimonialCard/>
         </div>
-        <div className={style.newsLetter}>
-          <span className={style.subHeading}> STAY UPTO DATE ABOUT <br/>OUR LATEST OFFERS</span>
-          <div>
-            <input type="email" name="email" placeholder="Enter your email address" />
-            <button className={`${style.btn} outlineBtn`}>Subscribe to our newsletter</button>
-          </div>
-        </div>
       </section>
-      <Footer/>
     </div>
   )
 }

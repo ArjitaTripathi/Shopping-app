@@ -1,18 +1,9 @@
 import React from 'react'
-import style from './LandingPage.module.scss'
+import style from './landingPage.module.scss'
 import mainImage from '../../public/images/photos/mainImage.png'
-import Versace from '../../public/images/photos/versace.png'
-import Gucci from '../../public/images/photos/gucci.png'
-import Prada from '../../public/images/photos/prada.png'
-import Zara from '../../public/images/photos/zara.png'
-import cKlien from '../../public/images/photos/cklien.png'
-import Casual from '../../public/images/photos/casual.png'
-import Formal from '../../public/images/photos/formal.png'
-import Gym from '../../public/images/photos/gym.png'
-import Swim from '../../public/images/photos/swimsuit.png'
-import Wedding from '../../public/images/photos/wedding.png'
-import Party from '../../public/images/photos/party.png'
 import Image from 'next/image'
+import leftArrow from '../../public/images/icons/left-arrow-svgrepo-com.svg'
+import rightArrow from '../../public/images/icons/right-arrow-svgrepo-com.svg'
 import ProductCard from '@/components/ProductCard/ProductCard'
 import TestimonialCard from '@/components/TestimonialCard/TestimonialCard'
 import { BrandImages, ClothesTypes } from '@/util/constants'
@@ -100,7 +91,15 @@ export const LandingPage = () => {
       </section>
       <section className={style.section5}>
         <span className={style.subHeading}>OUR HAPPY CUSTOMERS</span>
+        <div className={style.controllers}>
+          <Image src={leftArrow} alt="leftController" width="30" height="20" className={style.leftController}/>
+          <Image src={rightArrow} alt="rightController" width="30" height="20" className={style.rightController}/>
+        </div>
         <div className={style.cards}>
+          <TestimonialCard/>
+          <TestimonialCard/>
+          <TestimonialCard/>
+          <TestimonialCard/>
           <TestimonialCard/>
           <TestimonialCard/>
           <TestimonialCard/>

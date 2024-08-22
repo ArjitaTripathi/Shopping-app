@@ -38,7 +38,7 @@ export const BrandImages = [
     },
 ]
 
-export const ClothesTypes = [
+export const DressStyle = [
     {
         name:'Casual',
         src: Casual,
@@ -68,5 +68,35 @@ export const ClothesTypes = [
         name: 'Swim',
         src: Swim,
         objectFit: 'contain',
+    }
+]
+
+export const Colors = ['red','yellow','blue','green','white','black','pink','grey','orange','violet',]
+export const ProductDetailColors = ['brown','yellow','blue']
+export const BorderColors = ['#eb1707','#eaea0d','#0560a5','#309504','#eae4e4','#0000','#ffa1a1','#727171','#dd8f00','#dd53dd',]
+
+export const DressSize = [
+    'XX-Small', 'X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', '3X-Large', '4X-Large'
+]
+export const ClothesTypes = [
+    'T-shirts', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'
+]
+
+export const OrderSummaryTexts = [
+    {
+        text: "SubTotal",
+        amount: "$565"
+    },
+    {
+        text: "Discount (-20%)",
+        amount: "-$113"
+    },
+    {
+        text: "Delivery Fee",
+        amount: "$15"
+    },
+    {
+        text: "Total",
+        amount: "$467"
     }
 ]

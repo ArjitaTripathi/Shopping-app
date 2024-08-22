@@ -1,7 +1,17 @@
 .testimonialCard{
-    // background-color: blue;
+    background-color: rgb(204, 204, 204);
     width: 370px;
     padding: 30px 20px;
     border-radius: 20px;
     border: 1px solid rgb(229, 229, 228);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .rating{
+        display: flex;
+        gap: 5px;
+    }
+    h4{
+        margin: 4px 0;
+    }
 }

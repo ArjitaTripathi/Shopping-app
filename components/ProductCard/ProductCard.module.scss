@@ -1,6 +1,12 @@
 .product{
     width: 100%;
-    padding:0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        transform: translate(0, -5px);
+        transition: transform 350ms ease-in-out;
+    }
     .productImage{
         display: flex;
         align-items: center;
@@ -9,15 +15,21 @@
         border-radius: 20px;
     }
     .productDetails{
-        margin-top: 15px;
+        margin: 15px;
         .ItemName{
-            font-size: 1.2rem;
+            font-size: 1rem;
+            font-weight: bolder;
         }
         .rating{
             font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap:6px;
+            margin: 10px 0;
         }
         .productPrice{
             font-size: 1.3rem;
+            font-weight: bolder;
         }
     }
 }

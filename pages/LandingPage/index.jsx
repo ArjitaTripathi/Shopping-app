@@ -6,7 +6,7 @@ import leftArrow from '../../public/images/icons/left-arrow-svgrepo-com.svg'
 import rightArrow from '../../public/images/icons/right-arrow-svgrepo-com.svg'
 import ProductCard from '@/components/ProductCard/ProductCard'
 import TestimonialCard from '@/components/TestimonialCard/TestimonialCard'
-import { BrandImages, ClothesTypes } from '@/util/constants'
+import { BrandImages, DressStyle } from '@/util/constants'
 
 export const LandingPage = () => {
   return (
@@ -71,7 +71,7 @@ export const LandingPage = () => {
           <span className={style.subHeading}>BROWSE BY DRESS STYLE</span>
           <div className={style.gridContainer}>
             {
-              ClothesTypes.map(typeofCloth=>{
+              DressStyle.map(typeofCloth=>{
                 return  (
                   <div>
                     <h2>{typeofCloth.name}</h2>

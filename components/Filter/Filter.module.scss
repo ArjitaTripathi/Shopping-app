@@ -1,0 +1,53 @@
+.filter{
+    width: 80%;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 20px;
+    div{
+        .filterHeading{
+            font-size: 1rem;
+            font-weight: bolder;
+            padding-bottom: 10px;
+        }
+        .types,.styles{
+            display: flex;
+            flex-direction: column;
+            .type,.dressStyle{
+                padding: 10px 0;
+                cursor: pointer;
+            }
+        }
+        .colors{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            row-gap:10px;
+            .color{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+        .sizes{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 10px;
+            .size{
+                background-color: rgb(169, 167, 167);
+                padding: 10px 15px;
+                border-radius: 20px;
+                color: white;
+                width: fit-content;
+                cursor: pointer;
+            }
+        }
+    }
+    hr{
+        width: 100%;
+        margin: 30px 0;
+    }
+    .btn{
+        width: 80%;
+    }
+}

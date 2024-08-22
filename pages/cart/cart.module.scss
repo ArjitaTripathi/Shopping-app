@@ -1,0 +1,97 @@
+.cart{
+    margin: 0 90px;
+    .cartItems{
+        width: 100%;
+        height:fit-content;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 80px;
+        .eachCartItem{
+            border-radius:20px;
+            border: 1px solid rgb(132, 132, 132);
+            width: 60%;
+            padding: 20px;
+            hr{
+                margin: 10px 30px;
+            }
+            .item{
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                .itemImage{
+                    background-color: rgb(195, 195, 195);
+                    gap: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    width: 20%;
+                }
+                .itemInfo{
+                    width: 80%;
+                    padding: 10px;
+                    .itemText{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        .quantityBtn{
+                            padding: 10px;
+                            background-color: rgb(169, 167, 167);
+                            width: 20%;
+                            display: flex;
+                            justify-content: space-between;
+                            border-radius: 20px;
+                            gap: 20px;
+                            font-size: 1rem;
+                            &>button{
+                                all: unset;
+                                cursor: pointer;
+                            }
+                        }
+                        h3{
+                            margin-top: 0;
+                        }
+                    }
+                    div:nth-of-type(2){
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+        .orderSummary{
+            width: 40%;
+            height: 100%;
+            border: 1px solid rgb(132, 132, 132);
+            border-radius:20px;
+            padding: 20px;
+            hr{
+                margin: 15px 30px;
+            }
+            .prices{
+                display: flex;
+                justify-content: space-between;
+                line-height: 2;
+                font-size: 1.1rem;
+                span:nth-of-type(2){
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                .btn{
+                    width: 100%;
+                    border-radius: 25px;
+                    padding: 15px 0;
+                    margin-top: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

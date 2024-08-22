@@ -1,1 +1,28 @@
 
+.category{
+    margin: 0 90px;
+    border-top: 1px solid grey;
+    padding: 20px 0;
+    .location{
+        margin-bottom: 20px;
+    }
+    .categoryData{
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        .filterContainer{
+            width: 30%;
+        }
+        .clothesContainer{
+            width: 70%;
+            .products{
+                margin-top: 20px;
+                width: 95%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 25px;
+                row-gap: 10px;
+            }
+        }
+    }
+}

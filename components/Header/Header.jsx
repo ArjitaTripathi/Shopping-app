@@ -4,6 +4,7 @@ import Cart from '../../public/images/icons/cart-shopping-svgrepo-com.svg'
 import Account from '../../public/images/icons/account-circle-svgrepo-com.svg'
 import { SearchBar } from '../SearchBar/SearchBar'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export const Header = () => {
@@ -11,7 +12,7 @@ export const Header = () => {
     <div className={style.mainHeader}>
       <div className={style.menuContents}>
         <div className={style.brandName}>
-            SHOP.CO
+            <Link className="link" href='/'>SHOPPER_BY</Link>
         </div>
         <ul className={style.menuItems}>
             {/* <ul> */}

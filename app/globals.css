@@ -39,3 +39,6 @@ input{
   all:unset;
   cursor: pointer;
 }
+.linkHover:hover{
+  border-bottom: 2px solid #000;
+}

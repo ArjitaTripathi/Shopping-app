@@ -5,6 +5,7 @@ import Filter from '@/components/Filter/Filter';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import { useRouter } from 'next/router';
 import { ConvertToTitleCase } from '@/util/constantFunctions';
+import Link from 'next/link';
 
 export default function CategoryPage() {
     const router = useRouter()
@@ -12,9 +13,9 @@ export default function CategoryPage() {
     return (
     <div className={style.category}>
         <span className={style.location}>
-        Home
-        <Image src={rightArrow} alt="rightController" width="30" height="12"/>
-        {ConvertToTitleCase(categoryName)}
+            <Link href="/" className='link linkHover'>Home</Link>
+            <Image src={rightArrow} alt="rightController" width="30" height="12"/>
+            {ConvertToTitleCase(categoryName)}
         </span>
         <div className={style.categoryData}>
         <div className={style.filterContainer}>

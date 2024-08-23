@@ -7,6 +7,7 @@ import rightArrow from '../../public/images/icons/right-arrow-svgrepo-com.svg'
 import ProductCard from '@/components/ProductCard/ProductCard'
 import TestimonialCard from '@/components/TestimonialCard/TestimonialCard'
 import { BrandImages, DressStyle } from '@/util/constants'
+import Link from 'next/link'
 
 export const LandingPage = () => {
   return (
@@ -53,7 +54,9 @@ export const LandingPage = () => {
             <ProductCard/>
             <ProductCard/>
           </div>
-          <button className={`${style.btn} outlineBtn`}>View All</button>
+          <Link href='/category/newArrivals' className={style.link}>
+            <button className={`${style.btn} outlineBtn`}>View All</button>
+          </Link>
       </section>
       <hr />
       <section className={style.section3}>
@@ -64,7 +67,9 @@ export const LandingPage = () => {
             <ProductCard/>
             <ProductCard/>
           </div>
-          <button className={`${style.btn} outlineBtn`}>View All</button>
+          <Link href='/category/topSelling' className={`${style.link} link`}>
+            <button className={`${style.btn} outlineBtn`}>View All</button>
+          </Link>
       </section>
       <section className={style.section4}>
         <div className={style.dressTypes}>
@@ -74,15 +79,17 @@ export const LandingPage = () => {
               DressStyle.map(typeofCloth=>{
                 return  (
                   <div>
-                    <h2>{typeofCloth.name}</h2>
-                    <Image 
-                      src={typeofCloth.src} 
-                      alt={typeofCloth.name}
-                      layout='fill'
-                      objectFit={typeofCloth.objectFit}
-                      style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-40%, -50%)' }}
-                    />
-                  </div>
+                      <Link href={`/category/${typeofCloth.name.toLowerCase()}`} className='link'>
+                        <h2>{typeofCloth.name}</h2>
+                        <Image 
+                          src={typeofCloth.src} 
+                          alt={typeofCloth.name}
+                          layout='fill'
+                          objectFit={typeofCloth.objectFit}
+                          style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-40%, -50%)' }}
+                        />
+                      </Link>
+                    </div>
                 )
               })
             }

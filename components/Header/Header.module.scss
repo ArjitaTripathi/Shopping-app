@@ -19,10 +19,16 @@
             list-style-type: none;
             // background-color: pink;
             width: fit-content;
+            li{
+                cursor: pointer;
+            }
         }
         .cartAndAccount{
             display: flex;
             gap: 20px;
+            & > Image:hover{
+                cursor: pointer;
+            }
         }
     }
 }

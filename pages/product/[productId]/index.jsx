@@ -10,6 +10,7 @@ import Faq from '@/components/Faq/Faq'
 import { BorderColors, DressSize, ProductDetailColors } from '@/util/constants'
 import style from './productId.module.scss'
 import ProductCard from '@/components/ProductCard/ProductCard'
+import ProductDetails from '@/components/ProductDetails/ProductDetails'
 
 const ProductDetail = () => {
 
@@ -19,7 +20,7 @@ const ProductDetail = () => {
   const Tabs = [
     {
       Title: 'Product Details',
-      Content: <RatingReview/>
+      Content: <ProductDetails/>
     },
     {
       Title: 'Rating & Reviews',

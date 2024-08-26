@@ -12,7 +12,7 @@ export const Header = () => {
     <div className={style.mainHeader}>
       <div className={style.menuContents}>
         <div className={style.brandName}>
-            <Link className="link" href='/'>SHOPPER_BY</Link>
+            <Link className="link" href='/'>SHOPPER_BUY</Link>
         </div>
         <ul className={style.menuItems}>
             {/* <ul> */}
@@ -26,7 +26,9 @@ export const Header = () => {
             <SearchBar/>
         </div>
         <div className={style.cartAndAccount}>
-            <Image src={Cart} alt="Cart"/>
+            <Link href='/cart'>
+              <Image src={Cart} alt="Cart"/>
+            </Link>
             <Image src={Account} alt="Account"/>
         </div>
       </div>

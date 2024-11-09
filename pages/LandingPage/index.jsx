@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import style from './landingPage.module.scss'
 import mainImage from '../../public/images/photos/mainImage.png'
 import Image from 'next/image'
@@ -8,8 +8,10 @@ import ProductCard from '@/components/ProductCard/ProductCard'
 import TestimonialCard from '@/components/TestimonialCard/TestimonialCard'
 import { BrandImages, DressStyle } from '@/util/constants'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export const LandingPage = () => {
+
   return (
     <div className={style.mainContainer}>
       <section className={style.section1}>
@@ -98,19 +100,25 @@ export const LandingPage = () => {
       </section>
       <section className={style.section5}>
         <span className={style.subHeading}>OUR HAPPY CUSTOMERS</span>
-        <div className={style.controllers}>
-          <Image src={leftArrow} alt="leftController" width="30" height="20" className={style.leftController}/>
-          <Image src={rightArrow} alt="rightController" width="30" height="20" className={style.rightController}/>
-        </div>
-        <div className={style.cards}>
-          <TestimonialCard/>
-          <TestimonialCard/>
-          <TestimonialCard/>
-          <TestimonialCard/>
-          <TestimonialCard/>
-          <TestimonialCard/>
-          <TestimonialCard/>
-        </div>
+        <motion.div  className={style.carousal} whileTap={{cursor: "grabbing"}}>
+          <motion.div drag="x" dragConstraints={{right:400,left: -400}} className={style.innerCarousal}>
+            <motion.div className={style.item}>
+            <TestimonialCard/>
+            </motion.div>
+            <motion.div className={style.item}>
+            <TestimonialCard/>
+            </motion.div>
+            <motion.div className={style.item}>
+            <TestimonialCard/>
+            </motion.div>
+            <motion.div className={style.item}>
+            <TestimonialCard/>
+            </motion.div>
+            <motion.div className={style.item}>
+            <TestimonialCard/>
+            </motion.div>
+          </motion.div> 
+        </motion.div>
       </section>
     </div>
   )

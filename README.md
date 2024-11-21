@@ -31,3 +31,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![Screenshot (312)](https://github.com/user-attachments/assets/f774753e-ba2d-4a0a-bf27-4d4ef93c929f)
 
 ![Screenshot (313)](https://github.com/user-attachments/assets/da77227f-9d54-427d-9e1f-a646b0603668)
+
+![Screenshot (315)](https://github.com/user-attachments/assets/80af9536-981b-47b4-8ee7-0e841af5339d)
+
+![Screenshot (314)](https://github.com/user-attachments/assets/05ce6fda-3b84-4308-b60c-2973fc15d34b)
+
